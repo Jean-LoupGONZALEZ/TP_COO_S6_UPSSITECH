@@ -11,6 +11,11 @@ public class BoundaryCommander {
 	private BoundaryEnregistrerCoordonneesBancaires boundaryEnregistrerCoordonneesBancaires;
 	private ControlCommander controlCommander;
 	
+	public BoundaryCommander(ControlCommander controlCommander,BoundaryEnregistrerCoordonneesBancaires boundaryEnregistrerCoordonneesBancaires) {
+		this.controlCommander = controlCommander;
+		this.boundaryEnregistrerCoordonneesBancaires = boundaryEnregistrerCoordonneesBancaires;
+	}
+
 	//methodes
 	public void commander(int numClient) {
 		boolean clientConnecte = controlCommander.verifierIdentification(numClient);

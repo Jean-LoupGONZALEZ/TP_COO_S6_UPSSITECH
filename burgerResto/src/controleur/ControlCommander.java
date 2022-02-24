@@ -20,6 +20,10 @@ public class ControlCommander {
 	private Menu menu = Menu.getInstance();
 	private ControlVerifierIdentification controlVerifierIdentification;
 	
+	public ControlCommander(ControlVerifierIdentification controlVerifierIdentification) {
+		this.controlVerifierIdentification = controlVerifierIdentification;
+	}
+
 	//methodes
 	public boolean verifierIdentification(int numClient) {
 		return controlVerifierIdentification.verifierIdentification(ProfilUtilisateur.CLIENT, numClient);
